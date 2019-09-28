@@ -16,5 +16,6 @@ class Report extends Model
     public function cabang()
     {
         return $this->belongsTo('App\Cabang');
+        return $this->blongsTo('App\Jenis');
     }
 }

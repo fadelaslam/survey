@@ -7,7 +7,6 @@ use App\Jenis;
 use App\Cabang;
 use App\Report;
 use DB;
-
 class ReportController extends Controller
 {
     public function index()
