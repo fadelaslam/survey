@@ -188,7 +188,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="box-title">Kepelabuhanan </h4>
+                                <h4 class="box-title">Pelayanan Kapal </h4>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12">
@@ -206,7 +206,7 @@
                 <div class="clearfix"></div>
 
                 <!--  Penumpang  -->
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
@@ -223,7 +223,7 @@
                             <div class="card-body"></div>
                         </div>
                     </div><!-- /# column -->
-                </div>
+                </div> --}}
                 <!--  /Penumpang -->
                 <div class="clearfix"></div>
 
