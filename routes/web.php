@@ -58,3 +58,10 @@ Route::get('/responden/petikemas/end-survey', function () {
     return view('responden/petikemas/end_survey');
 });
 
+
+// Fungsi login
+Route::get('login/kapal', 'KapalController@loginKapal');
+Route::post('source/kapal', 'KapalController@sourceKapal');
+Route::get('logoutkapal', 'KapalController@logout');
+
+
