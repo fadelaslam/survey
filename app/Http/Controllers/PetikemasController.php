@@ -6,21 +6,21 @@ use Illuminate\Http\Request;
 use App\Responden;
 use DB;
 
-class KapalController extends Controller
+class PetikemasController extends Controller
 {
-    public function loginKapal()
+    public function loginPetikemas()
     {
-        return view('kapal');
+        return view('petikemas');
     }
 
-    public function sourceKapal(Request $request)
+    public function sourcePetikemas(Request $request)
     {
         $responden = Responden::where(['code' => $request->code])->firstOrFail();
 
         if($responden != null){
             session(['respondenId'=>$responden->id]);
-            return view('/responden/kapal/welcome_survey');
-        };
+            return view('/responden/petikemas/welcome_survey');
+        } 
         return redirect('/');
     }
 
@@ -31,10 +31,10 @@ class KapalController extends Controller
             return redirect('/');
         };
 
-        return view ('/responden/kapal/survey');
+        return view ('/responden/petikemas/survey');
     }
 
-    public function submitSurveyKapal()
+    public function submitSurveyPetikemas()
     {
         if(session()->get('respondenId') == null){
             return redirect('/');
@@ -44,18 +44,15 @@ class KapalController extends Controller
 
         DB::table('report')->insert([
             'cabang_id' => $responden->cabang_id,
-            'jenis_id' => 3,
+            'jenis_id' => 1,
             'responden_id' => $responden->id
         ]);
         
-        return view('/responden/kapal/end_survey');
+        return view('/responden/petikemas/end_survey');
     }
 
     public function logout()
     {
-        if(session()->get('respondenId') == null){
-            return redirect('/');
-        };
         session()->flush();
         return redirect('/');
     }

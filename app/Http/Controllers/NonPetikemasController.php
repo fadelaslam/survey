@@ -3,24 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Responden;
-use DB;
 
-class KapalController extends Controller
+class NonPetikemasController extends Controller
 {
-    public function loginKapal()
+    public function loginNonPetikemas()
     {
-        return view('kapal');
+        return view('petikemas');
     }
 
-    public function sourceKapal(Request $request)
+    public function sourceNonPetikemas(Request $request)
     {
         $responden = Responden::where(['code' => $request->code])->firstOrFail();
 
         if($responden != null){
             session(['respondenId'=>$responden->id]);
-            return view('/responden/kapal/welcome_survey');
-        };
+            return view('/responden/petikemas/welcome_survey');
+        } 
         return redirect('/');
     }
 
@@ -31,10 +29,10 @@ class KapalController extends Controller
             return redirect('/');
         };
 
-        return view ('/responden/kapal/survey');
+        return view ('/responden/non-petikemas/survey');
     }
 
-    public function submitSurveyKapal()
+    public function submitSurveyNonPetikemas()
     {
         if(session()->get('respondenId') == null){
             return redirect('/');
@@ -44,18 +42,15 @@ class KapalController extends Controller
 
         DB::table('report')->insert([
             'cabang_id' => $responden->cabang_id,
-            'jenis_id' => 3,
+            'jenis_id' => 2,
             'responden_id' => $responden->id
         ]);
         
-        return view('/responden/kapal/end_survey');
+        return view('/responden/non-petikemas/end_survey');
     }
 
     public function logout()
     {
-        if(session()->get('respondenId') == null){
-            return redirect('/');
-        };
         session()->flush();
         return redirect('/');
     }

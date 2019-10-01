@@ -289,13 +289,17 @@
             <div class="fadeIn first">
             <img src="{{ asset('users/images/pelindo4-logo.png') }}" id="icon" alt="User Icon" />
             <br>
-            <h5>Suurvey Pelanggan Pelindo 4</h5>
+            <h5>Suurvey Pelanggan Non-Petikemas Pelindo 4</h5>
             </div>
 
-            <a href="/login/petikemas" target="_blank" class="btn btn-primary" style="width: 200px;">Petikemas</a><br><br>
-            <a href="/login/non-petikemas" target="_blank" class="btn btn-success" style="width: 200px;">Non Petikemas</a><br><br>
-            <a href="/login/kapal" target="_blank" class="btn btn-primary" style="width: 200px;">Pelayanan Kapal</a><br><br>
+            <form action="/source/non-petikemas" method="post">
+                @csrf
 
+                    <input type="text" class="form-control" name="code" placeholder="Code Survey" required="" autofocus="" />
+                    <br>
+                    <br>    
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </form>
 
         </div>
     </div>

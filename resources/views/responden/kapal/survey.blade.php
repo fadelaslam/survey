@@ -29,7 +29,7 @@
         <div class="col-md-8">
             <div class="col-md-12 background">
                 <div class="kotak m-5">
-                    <iframe frameborder="0" style="height: 100%; width: 100%; border-radius: 10px;" src="https://www.murvey.com/s?5d771c2caf1a2cdf04d7a307&fill=true"></iframe>
+                    <iframe frameborder="0" style="height: 100%; width: 100%; border-radius: 10px;" src="https://www.murvey.com/s?5d771c2caf1a2cdf04d7a307&fill=true" ></iframe>
                 </div>
             </div>
         </div>

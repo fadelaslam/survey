@@ -22,46 +22,24 @@ Route::get('/kapal', 'ReportController@dataKapal');
 Route::get('/penumpang', 'ReportController@dataPenumpang');
 
 
-Route::get('/responden/kapal', function () {
-    return view('responden/kapal/welcome_survey');
-});
+// Fungsi login petikemas
+Route::get('login/petikemas', 'PetikemasController@loginPetikemas');
+Route::post('source/petikemas', 'PetikemasController@sourcePetikemas');
+Route::get('/responden/petikemas/main-survey', 'PetikemasController@startSurvey');
+Route::get('/responden/petikemas/end-survey', 'PetikemasController@submitSurveyPetikemas');
+Route::get('logoutpetikemas', 'PetikemasController@logout');
 
-Route::get('/responden/kapal/main-survey', function () {
-    return view('responden/kapal/survey');
-});
+// Fungsi login non-petikemas
+Route::get('login/non-petikemas', 'NonPetikemasController@loginNonPetikemas');
+Route::post('source/non-petikemas', 'NonPetikemasController@sourceNonpetikemas');
+Route::get('/responden/non-petikemas/main-survey', 'NonPetikemasController@startSurvey');
+Route::get('/responden/non-petikemas/end-survey', 'NonPetikemasController@submitSurveyPetikemas');
+Route::get('logoutkapal', 'NonPetikemasController@logout');
 
-Route::get('/responden/kapal/end-survey', function () {
-    return view('responden/kapal/end_survey');
-});
-
-Route::get('/responden/non-petikemas', function () {
-    return view('responden/non-petikemas/welcome_survey');
-});
-
-Route::get('/responden/non-petikemas/main-survey', function () {
-    return view('responden/non-petikemas/survey');
-});
-
-Route::get('/responden/non-petikemas/end-survey', function () {
-    return view('responden/non-petikemas/end_survey');
-});
-
-Route::get('/responden/petikemas', function () {
-    return view('responden/petikemas/welcome_survey');
-});
-
-Route::get('/responden/petikemas/main-survey', function () {
-    return view('responden/petikemas/survey');
-});
-
-Route::get('/responden/petikemas/end-survey', function () {
-    return view('responden/petikemas/end_survey');
-});
-
-
-// Fungsi login
+// Fungsi login kapal
 Route::get('login/kapal', 'KapalController@loginKapal');
 Route::post('source/kapal', 'KapalController@sourceKapal');
+Route::get('/responden/kapal/main-survey', 'KapalController@startSurvey');
+Route::get('/responden/kapal/end-survey', 'KapalController@submitSurveyKapal');
 Route::get('logoutkapal', 'KapalController@logout');
-
 
