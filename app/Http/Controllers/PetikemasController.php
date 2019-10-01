@@ -48,7 +48,7 @@ class PetikemasController extends Controller
             'responden_id' => $responden->id
         ]);
         
-        return view('/responden/petikemas/end_survey');
+        return view('/responden/petikemas/sukses');
     }
 
     public function logout()

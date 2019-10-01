@@ -48,7 +48,7 @@ class KapalController extends Controller
             'responden_id' => $responden->id
         ]);
         
-        return view('/responden/kapal/end_survey');
+        return view('/responden/kapal/sukses');
     }
 
     public function logout()

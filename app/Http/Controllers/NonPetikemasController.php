@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Responden;
+use DB;
 
 class NonPetikemasController extends Controller
 {
     public function loginNonPetikemas()
     {
-        return view('petikemas');
+        return view('non_petikemas');
     }
 
     public function sourceNonPetikemas(Request $request)
@@ -17,7 +19,7 @@ class NonPetikemasController extends Controller
 
         if($responden != null){
             session(['respondenId'=>$responden->id]);
-            return view('/responden/petikemas/welcome_survey');
+            return view('/responden/non-petikemas/welcome_survey');
         } 
         return redirect('/');
     }
@@ -46,7 +48,7 @@ class NonPetikemasController extends Controller
             'responden_id' => $responden->id
         ]);
         
-        return view('/responden/non-petikemas/end_survey');
+        return view('/responden/non-petikemas/sukses');
     }
 
     public function logout()

@@ -43,3 +43,7 @@ Route::get('/responden/kapal/main-survey', 'KapalController@startSurvey');
 Route::get('/responden/kapal/end-survey', 'KapalController@submitSurveyKapal');
 Route::get('logoutkapal', 'KapalController@logout');
 
+Route::get('/terimakasih', function(){
+    return view('responden/end_survey');
+});
+
