@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="{{ asset('users/css/style.css') }}">
 </head>
 <body>
-    <div class="container d-flex" style="background-color:white;">
-        <div class="col-md-10 mx-5 text-center color-primary">
-            <h1>Submit hasil survey anda berhasil</h1>
-            <button class="btn btn-primary my-4 redirect" onclick="redirect();">OK</button>
+    <div class="container d-flex">
+        <div class="col-md-4">
+            <div class="col-md-12 vh-100" style="background-image: url('{{ asset('users/images/bg2.jpeg') }}');background-repeat: no-repeat;background-size: cover; background-position: center;"></div>
+        </div>
+        <div class="col-md-8 p-5 text-center color-primary">
+            <h1>Terimakasih Atas Partisipasi Anda</h1>
+            <img src="{{ asset('users/images/handshake.png') }}" class="my-5">
+            <p class="my-3">
+                Masukan Anda Sangat Berharga Bagi Kami    
+            </p>
         </div>
     </div>
-<script type="text/javascript">
-    function redirect(){
-        window.top.location.href = "http://localhost:8000/responden/petikemas/end-survey";
-    }
-</script>
+
+    <script type="text/javascript">
+        function redirect(){
+            window.top.location.href = "http://localhost:8000/responden/petikemas/end-survey";
+        }
+    </script>
 </body>
 </html>

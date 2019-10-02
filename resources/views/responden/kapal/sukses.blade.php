@@ -10,7 +10,7 @@
 <body>
     <div class="container d-flex" style="background-color:white;">
         <div class="col-md-10 mx-5 text-center color-primary">
-            <h1>Submit hasil survey anda berhasil</h1>
+            <h1>Submit hasillllll survey anda berhasil</h1>
             <button class="btn btn-primary my-4 redirect" onclick="redirect();">OK</button>
         </div>
     </div>
