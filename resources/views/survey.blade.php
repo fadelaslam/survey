@@ -17,13 +17,12 @@
         
         /* BASIC */
 
-        html {
-        background-color: #56baed;
-        }
-
         body {
         font-family: "Poppins", sans-serif;
         height: 100vh;
+        background-image: url('/users/images/bg3.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;        
         }
 
         a {
@@ -41,6 +40,11 @@
         display:inline-block;
         margin: 40px 8px 10px 8px; 
         color: #cccccc;
+        }
+        
+        p {
+        font-weight: 600;
+        font-size: 18px;
         }
 
 
@@ -61,11 +65,11 @@
         -webkit-border-radius: 10px 10px 10px 10px;
         border-radius: 10px 10px 10px 10px;
         background: #fff;
-        padding: 30px;
+        padding: 20px;
         width: 90%;
         max-width: 450px;
         position: relative;
-        padding: 0px;
+        padding-top: 30px;
         -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
         box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
         text-align: center;
@@ -79,24 +83,15 @@
         -webkit-border-radius: 0 0 10px 10px;
         border-radius: 0 0 10px 10px;
         }
-
-
-
         /* TABS */
-
         h2.inactive {
         color: #cccccc;
         }
-
         h2.active {
         color: #0d0d0d;
         border-bottom: 2px solid #5fbae9;
         }
-
-
-
         /* FORM TYPOGRAPHY*/
-
         input[type=button], input[type=submit], input[type=reset]  {
         background-color: #56baed;
         border: none;
@@ -276,7 +271,7 @@
         } 
 
         #icon {
-        width:30%;
+        width:70%;
         }
 
     </style>
@@ -287,14 +282,15 @@
 
             <!-- Icon -->
             <div class="fadeIn first">
-            <img src="{{ asset('users/images/pelindo4-logo.png') }}" id="icon" alt="User Icon" />
+            <img src="{{ asset('users/images/pelindo4-logo.png') }}" id="icon" alt="User Icon" /> <br><br>
             <br>
-            <h5>Suurvey Pelanggan Pelindo 4</h5>
+            <p style="font-size: 24px; margin-bottom: 1px;">Customer Online Survey Board</P>  <P>PT. Pelabuhan Indonesia IV (Persero) <br> Tahun 2019</p>
+            {{-- <p>CUSTOMER ONLINE SURVEY BOARD <br> PT. PELABUHAN INDONESIA IV (PERSERO) <br> TAHUN 2019</p> --}}
             </div>
 
-            <a href="/login/petikemas" target="_blank" class="btn btn-primary" style="width: 200px;">Petikemas</a><br><br>
-            <a href="/login/non-petikemas" target="_blank" class="btn btn-success" style="width: 200px;">Non Petikemas</a><br><br>
-            <a href="/login/kapal" target="_blank" class="btn btn-primary" style="width: 200px;">Pelayanan Kapal</a><br><br>
+            <a href="/login/petikemas" target="_blank" class="btn btn-primary" style="width: 300px; ">Petikemas</a><br><br>
+            <a href="/login/non-petikemas" target="_blank" class="btn btn-success" style="width: 300px;">Non Petikemas</a><br><br>
+            <a href="/login/kapal" target="_blank" class="btn btn-primary" style="width: 300px; background-color: black;">Kapal</a><br><br>
 
 
         </div>
