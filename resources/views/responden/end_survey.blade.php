@@ -18,7 +18,7 @@
             <p class="my-3">
                 Masukan Anda Sangat Berharga Bagi Kami    
             </p>
-            <button class="btn btn-primary">Home</button>
+            <a href="./" class="btn btn-primary">Home</a>
         </div>
     </div>
 </body>
