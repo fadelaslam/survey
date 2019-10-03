@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('survey');
 });
 
+Route::get('/ngetesuskses', function () {
+    return view('responden/non-petikemas/sukses');
+});
+
 Route::get('/report', 'ReportController@index');
 Route::get('/petikemas', 'ReportController@dataPetikemas');
 Route::get('/nonpetikemas', 'ReportController@dataNonPetikemas');

@@ -9,14 +9,18 @@
 </head>
 <body>
     <div class="container d-flex" style="background-color:white;">
-        <div class="col-md-10 mx-5 text-center color-primary">
-            <h1>Submit hasil survey anda berhasil</h1>
-            <button class="btn btn-primary my-4 redirect" onclick="redirect();">OK</button>
+       <div style="margin:15%" class="col-md-8 text-center color-primary">
+            <h1>Terimakasih Atas Partisipasi Anda</h1>
+            <img src="{{ asset('users/images/handshake.png') }}" class="my-5">
+            <p class="my-3">
+                Masukan Anda Sangat Berharga Bagi Kami    
+            </p>
+            <button class="btn btn-primary">Home</button>
         </div>
     </div>
 <script type="text/javascript">
     function redirect(){
-        window.top.location.href = "http://localhost:8000/responden/non-petikemas/end-survey";
+        window.top.location.href = "http://survey.havara.co.id";
     }
 </script>
 </body>
