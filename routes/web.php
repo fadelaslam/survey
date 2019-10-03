@@ -37,7 +37,7 @@ Route::get('logoutpetikemas', 'PetikemasController@logout');
 Route::get('login/non-petikemas', 'NonPetikemasController@loginNonPetikemas');
 Route::post('source/non-petikemas', 'NonPetikemasController@sourceNonpetikemas');
 Route::get('/responden/non-petikemas/main-survey', 'NonPetikemasController@startSurvey');
-Route::get('/responden/non-petikemas/end-survey', 'NonPetikemasController@submitSurveyPetikemas');
+Route::get('/responden/non-petikemas/end-survey', 'NonPetikemasController@submitSurveyNonPetikemas');
 Route::get('logoutkapal', 'NonPetikemasController@logout');
 
 // Fungsi login kapal
